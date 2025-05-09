@@ -1,0 +1,59 @@
+@use '../../../../scss/colors.scss' as color;
+.planslist {
+    margin-top: 30px;
+    color: color.$blackLight;
+    display: flex;
+    overflow: auto;
+    &_wrapper {
+        display: flex;
+    }
+    &_item {
+        position: relative;
+        min-height: 500px;
+        &_title {
+            display: flex;
+            h3 {
+                font-weight: 900;
+                font-size: 24px;
+                min-height: 90px;
+                margin-bottom: 15px;
+            }
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        span {
+            color: color.$gray;
+            font-size: 12px;
+            font-weight: 900;
+        }
+        .price {
+            color: color.$blackLight;
+            font-size: 20px;
+            font-weight: 900;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            padding-left: 16px;
+            border-top: 1px solid color.$greyline3;
+            padding-top: 25px;
+            margin-top: 25px;
+            li {
+                margin-bottom: 20px;
+            }
+        }
+        .rimacbutton {
+            position: absolute;
+            bottom: 0;
+            font-size: 18px;
+            font-weight: 700;
+            width: 100%;
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

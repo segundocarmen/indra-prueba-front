@@ -1,0 +1,76 @@
+@use '../../../../scss/colors.scss' as color;
+.homeform {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    padding: 10px;
+    box-sizing: border-box;
+    &_wrapper {
+        width: 100%;
+        max-width: 336px;
+        &_head {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+            &_title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                img {
+                    width: 120px;
+                    @media screen and (min-width: 480px) {
+                        width: 172px;
+                    }
+                }
+                h1 {
+                    font-size: 22px;
+                    font-weight: 700;
+                    text-align: justify;
+                    @media screen and (min-width: 480px) {
+                        font-size: 32px;
+                        text-align: left;
+                    }
+                }
+                @media screen and (min-width: 480px) {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+            &_banner {
+                width: 100%;
+                max-width: 140px;
+                min-width: 140px;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+            @media screen and (min-width: 480px) {
+                flex-direction: row;
+                justify-content: space-around;
+                padding-bottom: 5px;
+            }
+        }
+        &_subtitle {
+            padding-top: 20px;
+            border-top: 1px solid color.$greyLine;
+            p {
+                text-align: justify;
+                font-size: 12px;
+                font-weight: 600;
+            }
+            @media screen and (min-width: 480px) {
+                border-top: none;
+                padding-top: 5px;
+            }
+        }
+        &_form {
+            margin-top: 16px;
+        }
+        @media screen and (min-width: 480px) {
+            max-width: 352px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+    }
+}

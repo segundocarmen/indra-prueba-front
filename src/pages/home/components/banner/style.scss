@@ -1,0 +1,10 @@
+.homebanner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &_image {
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+    }
+}

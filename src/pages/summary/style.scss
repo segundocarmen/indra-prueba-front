@@ -1,0 +1,54 @@
+@use '../../scss/colors.scss' as color;
+.summarypage_head {
+    padding: 10px;
+    h1 {
+        color: color.$blackLight;
+        font-size: 28px;
+        font-weight: 700;
+        @media screen and (min-width: 480px) {
+            font-size: 40px;
+        }
+    }
+    @media screen and (min-width: 480px) {
+        padding: 10px 20px;
+    }
+}
+.summary_card_head {
+    color: color.$blackLight;
+    padding-bottom: 20px;
+    border-bottom: 1px solid color.$greyline3;
+    flex-direction: column;
+    .title {
+        font-size: 10px;
+        font-weight: 900;
+    }
+    .summary_name {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        img {
+            margin-right: 15px;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+}
+
+.summary_card_body {
+    color: color.$blackLight;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    &_item {
+        margin-bottom: 25px;
+        p {
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}

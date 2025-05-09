@@ -1,0 +1,73 @@
+@use '../../../../scss/colors.scss' as color;
+.planpage_contractor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: color.$blackLight;
+    margin: auto;
+    .planhead {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: 15px;
+            @media screen and (min-width: 480px) {
+                font-size: 40px;
+                text-align: center;
+            }
+        }
+        p {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+    .planselector {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &_item {
+            padding-top: 25px;
+            position: relative;
+            cursor: pointer;
+            .check {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 24px;
+                height: 24px;
+                border: 1px solid color.$greyline2;
+                border-radius: 50%;
+                &.active {
+                    border: none;
+                    background-image: url('../../../../assets/RadioCheck-on.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+            h3,
+            p {
+                margin-top: 10px;
+            }
+            h3 {
+                font-size: 20px;
+                font-weight: 900;
+            }
+            p {
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        width: 550px;
+    }
+}

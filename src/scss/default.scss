@@ -1,0 +1,118 @@
+@use './colors' as color;
+// @font-face {
+//     font-family: 'WikiSans';
+//     src: url('fonts/wiki-sans/WinkySans-Regular.ttf') format('truetype');
+// }
+*,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    padding: 0;
+    margin: 0;
+}
+body,
+#root {
+    width: 100%;
+    min-height: 100vh;
+    color: color.$black;
+}
+
+a {
+    color: color.$black;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.page {
+    display: block;
+    margin: auto;
+    width: 100%;
+    min-height: calc(100vh - 208px);
+    padding: 20px 10px 10px;
+    box-sizing: border-box;
+    position: relative;
+    @media screen and (min-width: 480px) {
+        min-height: calc(100vh - 170px);
+    }
+    @media screen and (min-width: 768px) {
+        max-width: 600px;
+    }
+    @media screen and (min-width: 1024px) {
+        max-width: 900px;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: 1100px;
+    }
+}
+
+.dflex {
+    display: flex;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    > div {
+        width: 100%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        .invalid-feedback {
+            position: absolute;
+            color: color.$red;
+            font-size: 12px;
+            bottom: -12px;
+            left: 2px;
+            opacity: 0.7;
+        }
+    }
+    // &.group > :first-child > :first-child {
+    //     border-top-right-radius: 0;
+    //     border-bottom-right-radius: 0;
+    // }
+    // &.group > :last-child > :first-child {
+    //     border-top-left-radius: 0;
+    //     border-bottom-left-radius: 0;
+    // }
+}
+
+.form-label {
+    font-size: 12px;
+}
+select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../assets/gl-sm-down.png');
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: 15px;
+}
+.form-control {
+    width: 100%;
+    max-width: 350px;
+    height: 56px;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid color.$greyLine;
+    box-sizing: border-box;
+    &:focus-visible {
+        border: 1px solid color.$greyLine;
+    }
+}
+.form-control-check {
+    margin: 2px 5px 2px;
+    accent-color: #000;
+    height: 20px;
+    width: 20px;
+}

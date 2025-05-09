@@ -1,0 +1,24 @@
+@use '../../scss/colors.scss' as color;
+.rimacbutton {
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_button {
+        width: 100%;
+        gap: 8px;
+        border-radius: 40px;
+        color: color.$whiteColor;
+        font-weight: 700;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        @media screen and (min-width: 768px) {
+            width: 195px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        width: 200px;
+    }
+}

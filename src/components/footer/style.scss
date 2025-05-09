@@ -1,0 +1,29 @@
+@use '../../scss/colors.scss' as color;
+.footer {
+    background-color: color.$black;
+    height: 152px;
+    padding: 32px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-direction: column;
+    &_info {
+        color: color.$grayLight;
+        font-size: 12px;
+        border-top: 1px solid color.$greyLine;
+        padding-top: 14px;
+        @media screen and (min-width: 480px) {
+            font-size: 14px;
+            border-top: none;
+            padding-top: 0;
+        }
+    }
+    @media screen and (min-width: 480px) {
+        height: 106px;
+        padding: 32px 120px;
+    }
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
