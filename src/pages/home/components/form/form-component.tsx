@@ -18,7 +18,6 @@ const FormComponent = ({ OnSubmit }: FormInterface) => {
         >
             {({ errors, touched }) => (
                 <Form>
-                    <p> {JSON.stringify(errors)} </p>
                     <div className='homeform_wrapper_form'>
                         <div className='form-group dflex first-group'>
                             <div>
